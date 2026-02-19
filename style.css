@@ -1,0 +1,934 @@
+/* General Reset */
+/* =========================================
+   1. GENERAL RESET & GLOBAL STYLES
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fff;
+}
+
+/* Global Container - This aligns everything center */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* =========================================
+   2. NAVIGATION BAR (NAV-1)
+   ========================================= */
+.nav-1 {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky; /* Optional: Keeps nav at top */
+    top: 0;
+    z-index: 1000;
+}
+
+/* --- Top Utility Bar --- */
+.nav-1-top {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.nav-1-contact span {
+    margin-right: 20px;
+    font-weight: 500;
+}
+
+.nav-1-contact i {
+    margin-right: 5px;
+}
+
+.nav-1-socials {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.lang-select {
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.social-icons a {
+    color: #333;
+    margin-left: 15px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #2563EB;
+}
+
+/* --- Main Navigation Bar --- */
+.nav-1-main {
+    padding: 15px 0;
+}
+
+/* Logo Image */
+.nav-logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #f0f0f0;
+    display: block; /* Fixes alignment issues */
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-right: auto; 
+    margin-left: 30px; 
+}
+
+.nav-links li {
+    position: relative; /* For dropdown positioning */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-links li a.active,
+.nav-links li a:hover {
+    color: #2563EB;
+}
+
+/* --- Dropdown Menu Styling --- */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    width: 220px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 10px 0;
+    display: none; /* Hidden by default */
+    list-style: none;
+    flex-direction: column;
+    z-index: 100;
+    margin-top: 15px;
+}
+
+.dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 20px;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    transform: rotate(45deg);
+    border-top: 1px solid #f0f0f0;
+    border-left: 1px solid #f0f0f0;
+}
+
+.nav-links li:hover .dropdown-menu {
+    display: flex;
+}
+
+.dropdown-menu li a {
+    padding: 12px 20px;
+    color: #555;
+    font-size: 15px;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f8f9fa;
+    color: #2563EB;
+}
+
+/* --- Right Actions (Cart & Login) --- */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.cart-icon {
+    position: relative;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+}
+
+.cart-icon .badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: #d946ef;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-login {
+    text-decoration: none;
+    background: #00b894;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: opacity 0.3s;
+}
+
+.btn-login:hover {
+    opacity: 0.9;
+}
+
+.mobile-toggle {
+    display: none; /* Hidden on Desktop */
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* =========================================
+   3. HERO SECTION (MAIN-1)
+   ========================================= */
+.main-1 {
+    background-color: #e6f2ff; /* Light Sky Blue */
+    padding: 80px 0;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ensure main-1 uses the same flex logic */
+.main-1 .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.main-content {
+    flex: 1;
+    padding-right: 50px;
+    z-index: 2;
+}
+
+.subtitle {
+    color: #00b894;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.main-content h1 {
+    font-size: 3.5rem;
+    color: #2d3436;
+    font-weight: 800;
+    margin-bottom: 25px;
+    line-height: 1.1;
+}
+
+.name-highlight {
+    color: #00b894;
+    position: relative;
+    display: inline-block;
+}
+
+.name-highlight::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    bottom: 2px;
+    left: 0;
+    background-color: #00b894;
+    border-radius: 4px;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.main-content p {
+    color: #636e72;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    max-width: 550px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-solid {
+    background-color: #00b894;
+    color: #fff;
+    padding: 12px 35px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn-solid:hover {
+    background-color: #00a187;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #00b894;
+    border: 2px solid #00b894;
+    padding: 12px 35px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background-color: #00b894;
+    color: #fff;
+}
+
+.main-image {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.main-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    border-radius: 20px;
+}
+
+.bg-circle {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: #dfe6e9;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 0.5;
+}
+
+/* =========================================
+   4. MOBILE RESPONSIVENESS (PHONES)
+   ========================================= */
+@media screen and (max-width: 768px) {
+    /* -- Nav Mobile -- */
+    .nav-1-top {
+        display: none; 
+    }
+
+    .nav-1-main .container {
+        position: relative;
+    }
+
+    .mobile-toggle {
+        display: block;
+        position: absolute;
+        right: 15px;
+    }
+    
+    .nav-actions {
+        margin-right: 40px; 
+        gap: 15px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: white;
+        padding: 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        z-index: 100;
+        margin-left: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        border-bottom: 1px solid #f5f5f5;
+    }
+    
+    .nav-links li a {
+        padding: 15px 20px;
+    }
+
+    /* Mobile Dropdown */
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        width: 100%;
+        display: none;
+        padding-left: 20px;
+        margin-top: 0;
+        border-left: 4px solid #f0f0f0;
+    }
+    
+    /* Make dropdown appear on hover (or click) in mobile */
+    .nav-links li:hover .dropdown-menu {
+        display: flex;
+    }
+
+    /* -- Main Mobile -- */
+    .main-1 {
+        padding: 50px 0;
+        text-align: center;
+        min-height: auto;
+    }
+
+    .main-1 .container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .main-content {
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .main-content p {
+        font-size: 1rem;
+    }
+
+    .action-buttons {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .main-image {
+        width: 100%;
+    }
+
+    .main-image img {
+        max-width: 300px;
+    }
+
+    .bg-circle {
+        width: 250px;
+        height: 250px;
+    }
+}
+/* --- Dropdown Menu Styling (FIXED) --- */
+.nav-links li.dropdown-item {
+    position: relative;
+    height: 100%; /* Ensures height aligns for hover */
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%; /* Positions it right at the bottom edge */
+    left: 0;
+    background-color: #ffffff;
+    width: 240px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 10px 0;
+    
+    /* Animation & Display */
+    display: block; /* We use opacity/visibility for smoother hover */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    
+    list-style: none;
+    flex-direction: column;
+    z-index: 9999; /* Very high z-index to sit on top of everything */
+    margin-top: 15px; /* The visual gap */
+}
+
+/* THE FIX: Invisible Bridge */
+/* This fills the gap between the link and the menu so hover doesn't break */
+.dropdown-menu::after {
+    content: "";
+    position: absolute;
+    top: -20px; /* Covers the margin-top gap */
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: transparent; 
+}
+
+/* The small arrow tip */
+.dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 20px;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    transform: rotate(45deg);
+    border-top: 1px solid #f0f0f0;
+    border-left: 1px solid #f0f0f0;
+    z-index: 2;
+}
+
+/* Show Dropdown on Hover */
+.nav-links li.dropdown-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li a {
+    padding: 12px 20px;
+    color: #555;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f8f9fa;
+    color: #2563EB;
+}
+
+/* --- Mobile Specific Fixes --- */
+@media screen and (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        opacity: 1; /* Always visible in flow if active */
+        visibility: visible;
+        transform: none;
+        display: none; /* Controlled by flex/none */
+        box-shadow: none;
+        width: 100%;
+        margin-top: 0;
+        transition: none;
+    }
+    
+    .dropdown-menu::after {
+        display: none; /* Remove bridge on mobile */
+    }
+
+    /* On mobile, show menu when hovering the parent li */
+    .nav-links li.dropdown-item:hover .dropdown-menu {
+        display: flex;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* --- Main-1 Section Styling --- */
+.main-1 {
+    /* Solid Light Sky Blue Background */
+    background-color: #e6f2ff; 
+    padding: 80px 0;
+    min-height: 90vh; /* Covers most of the screen */
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ensure container handles the layout */
+.main-1 .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* --- Left Text Column --- */
+.main-content {
+    flex: 1;
+    padding-right: 50px;
+    z-index: 2;
+}
+
+.subtitle {
+    color: #00b894; /* Teal Green */
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.main-content h1 {
+    font-size: 3.5rem;
+    color: #2d3436;
+    font-weight: 800;
+    margin-bottom: 25px;
+    line-height: 1.1;
+}
+
+/* Green Color and Underline style for "Hossen" */
+.name-highlight {
+    color: #00b894;
+    position: relative;
+    display: inline-block;
+}
+
+/* The curved underline effect */
+.name-highlight::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    bottom: 2px;
+    left: 0;
+    background-color: #00b894;
+    border-radius: 4px;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.main-content p {
+    color: #636e72;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    max-width: 550px;
+}
+
+/* --- Buttons --- */
+.action-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-solid {
+    background-color: #00b894;
+    color: #fff;
+    padding: 12px 35px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn-solid:hover {
+    background-color: #00a187;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #00b894;
+    border: 2px solid #00b894;
+    padding: 12px 35px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background-color: #00b894;
+    color: #fff;
+}
+
+/* --- Right Image Column --- */
+.main-image {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.main-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    /* Optional: Drop shadow to make white image stand out against light bg */
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.05));
+}
+
+/* Decorative Circle behind image */
+.bg-circle {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: #dfe6e9; /* Light grey/purple circle */
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 0.5;
+}
+
+/* --- Mobile Responsive Code --- */
+@media screen and (max-width: 768px) {
+    .main-1 {
+        padding: 50px 0;
+        text-align: center;
+        min-height: auto;
+    }
+
+    .main-1 .container {
+        flex-direction: column-reverse; /* Puts image on top, text below? OR column for Image bottom */
+        /* Common practice: Image top on mobile, or Text top. 
+           Let's do Text Top, Image Bottom (Standard) -> flex-direction: column */
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .main-content {
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center align text */
+    }
+
+    .main-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .main-content p {
+        font-size: 1rem;
+    }
+
+    .action-buttons {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .main-image {
+        width: 100%;
+    }
+
+    .main-image img {
+        max-width: 300px; /* Smaller image on phone */
+    }
+
+    .bg-circle {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- video section -->
+
+
+
+
+/* --- Reels Section Styling --- */
+.reels-section {
+    background-color: #ffffff;
+    padding: 20px 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.reels-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: block; /* Ensures block layout */
+}
+
+/* Header */
+.reels-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.reels-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.reels-title h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f0f0f;
+    margin: 0;
+}
+
+.reels-title i {
+    font-size: 24px;
+}
+
+/* Slider Container */
+.reels-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* The Scroll Track */
+.reels-track {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto; /* Allows scrolling */
+    scroll-behavior: smooth;
+    padding: 10px 5px; /* Space for shadows */
+    width: 100%;
+    
+    /* Hide Scrollbar */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE */
+}
+
+.reels-track::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+/* The Vertical Video Card (9:16 Ratio) */
+.reel-card {
+    flex: 0 0 auto; /* Don't shrink */
+    width: 250px;   /* Fixed width like a phone */
+    height: 445px;  /* Fixed height (9:16 aspect ratio) */
+    border-radius: 16px; /* Rounded corners */
+    overflow: hidden;
+    position: relative;
+    background-color: #000; /* Black background while loading */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.reel-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Iframe (Video) Styling */
+.reel-card iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    object-fit: cover;
+    display: block;
+}
+
+/* Navigation Buttons */
+.nav-btn {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: all 0.2s;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-btn i {
+    color: #0f0f0f;
+    font-size: 18px;
+}
+
+.nav-btn:hover {
+    background-color: #f2f2f2;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Positioning Buttons Outside/Edge */
+.prev-btn {
+    left: -24px;
+}
+
+.next-btn {
+    right: -24px;
+}
+
+/* --- Mobile Responsiveness --- */
+@media screen and (max-width: 768px) {
+    /* Hide arrows on mobile (users swipe) */
+    .nav-btn {
+        display: none;
+    }
+
+    .reel-card {
+        width: 160px; /* Smaller width on phone */
+        height: 284px; /* Maintain ratio */
+    }
+}

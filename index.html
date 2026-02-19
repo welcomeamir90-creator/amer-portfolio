@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav-1 Implementation</title>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="nav-1">
+    <!-- Top Utility Bar -->
+    <div class="nav-1-top">
+        <div class="container">
+            <div class="nav-1-contact">
+                <span><i class="fa-solid fa-phone"></i> 01335421651</span>
+                <span><i class="fa-solid fa-location-dot"></i> Khulna, Bangladesh.</span>
+            </div>
+            <div class="nav-1-socials">
+                <div class="lang-select">
+                    ENGLISH <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <div class="nav-1-main">
+        <div class="container">
+            <!-- Logo (Profile Image) -->
+            <div class="nav-logo">
+                <img src="/black.jpg" alt="Logo">
+            </div>
+
+            <!-- Hamburger Menu for Mobile -->
+            <div class="mobile-toggle" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" class="active">Home</a></li>
+                
+                <!-- DROPDOWN MENU ADDED HERE -->
+                <li class="dropdown-item">
+                    <a href="#">Courses <i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><i class="fa-solid fa-desktop"></i> Motion Graphics</a></li>
+                        <li><a href="#"><i class="fa-solid fa-pen-nib"></i> Graphic Design</a></li>
+                        <li><a href="#"><i class="fa-solid fa-video"></i> Video Editing</a></li>
+                        <li><a href="#"><i class="fa-solid fa-list-ul"></i> All Courses</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Right Side Actions -->
+            <div class="nav-actions">
+                
+                <a href="#" class="btn-login">Login</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- JavaScript for Mobile Menu -->
+<script>
+    function toggleMenu() {
+        const navLinks = document.getElementById('navLinks');
+        navLinks.classList.toggle('active');
+    }
+</script>
+
+    <!-- Simple Script for Mobile Toggle -->
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+
+
+
+
+
+<section class="main-1">
+    <div class="container">
+        <!-- Text Content -->
+        <div class="main-content">
+            <h4 class="subtitle">Graphic Designer & Video Editor</h4>
+            <h1>Amir <span class="name-highlight">Hamja</span></h1>
+            <p>
+               Graphics designer plus
+Video editor.
+Contact : 01580-672-143 (Whatsapp)
+DM for Work
+            </p>
+            <div class="action-buttons">
+                <a href="#" class="btn-solid">Portfolio</a>
+            </div>
+        </div>
+
+        <!-- Right Side Image -->
+        <div class="main-image">
+            <!-- White Placeholder Image -->
+            <img src="/light.jpg"  alt="Profile Image">
+            
+            <!-- Decorative background circle behind image -->
+            <div class="bg-circle"></div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<!-- video section -->
+
+
+<section class="reels-section">
+    <div class="container">
+        <!-- Header -->
+        <div class="reels-header">
+            <div class="reels-title">
+                <i class="fa-brands fa-youtube" style="color: #FF0000;"></i>
+                <h2>Reels</h2>
+            </div>
+            <i class="fa-solid fa-ellipsis" style="color: #606060; cursor: pointer;"></i>
+        </div>
+
+        <!-- Slider Container -->
+        <div class="reels-container">
+            <!-- Left Button -->
+            <button class="nav-btn prev-btn" onclick="scrollReels(-1)">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <!-- Scrollable Track -->
+            <div class="reels-track" id="reelsTrack">
+                
+                <!-- Reel 1: Coding Setup -->
+                <div class="reel-card">
+                                       <iframe width="402" height="714" src="https://www.youtube.com/embed/zuT5Zq_3uvg" title="Hrithik Roshan reels.typography" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                </div>
+
+                <!-- Reel 2: Nature -->
+                <div class="reel-card">
+                   <iframe width="560" height="315" src="https://www.youtube.com/embed/LgRpyFLzY9I?si=x-Af6ngOCVMewv6o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <!-- Reel 3: Tech -->
+                <div class="reel-card">
+                   <iframe width="714" height="714" src="https://www.youtube.com/embed/KynUU0aJpXo" title="Facebook ad video edit" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <!-- Reel 4: Design -->
+                <div class="reel-card">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Ukt2gVz25PQ?si=Oe58btvb13VWGYFH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <!-- Reel 5: Motivation -->
+                <div class="reel-card">
+                   <iframe width="560" height="315" src="https://www.youtube.com/embed/vGWVJ_XGe9I?si=ly5__m8hqkIAS_9q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                 <!-- Reel 6: Extra -->
+                 <div class="reel-card">
+                   <iframe width="560" height="315" src="https://www.youtube.com/embed/dZYf_HwQgN0?si=72t6vW-OdEAJEvRN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+            </div>
+
+            <!-- Right Button -->
+            <button class="nav-btn next-btn" onclick="scrollReels(1)">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Script to handle scrolling -->
+<script>
+    function scrollReels(direction) {
+        const track = document.getElementById('reelsTrack');
+        const cardWidth = 270; // Width of one card + gap
+        track.scrollBy({
+            left: direction * cardWidth,
+            behavior: 'smooth'
+        });
+    }
+</script>
+
+
+
+
+</body>
+</html>
